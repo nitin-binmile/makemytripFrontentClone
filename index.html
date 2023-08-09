@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>makemytrip</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/fdd623a6e0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Lato&family=Poppins:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Lato";
+      }
+
+      .scroll-x-rows-2 {
+        display: grid;
+        /* auto auto is telling the browser to render two rows, if needed */
+        grid-template-rows: auto auto;
+        grid-auto-flow: column;
+        overflow-x: scroll;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#f2f2f2] min-h-[100vh] bg-[length:100%_1650px]  md:bg-[length:100%_1100px] lg:bg-[length:100%_850px] bg-no-repeat bg-gradient-to-b from-[#051322] to-[#15457c]"
+  >
+    <header
+      class="pt-[10px] text-center px-[10px] md:px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[140px]"
+    >
+      <nav class="flex flex-row text-white justify-between items-center">
+        <div class="w-[113px] h-[36px]">
+          <img
+            src="https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/header/mmtLogoWhite.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="hidden xl:flex flex-row justify-center items-center gap-[10px]"
+        >
+          <div
+            class="flex flex-col items-start border-r-[1px] border-dotted px-[12px] border-borderColor"
+          >
+            <p class="font-bold">Super offers</p>
+            <p>Explore great deals & offers</p>
+          </div>
+
+          <div
+            class="flex flex-col items-start border-r-[1px] border-dotted px-[12px] border-borderColor"
+          >
+            <p class="font-bold">Introducing myBiz</p>
+            <p>Business Travel Solution</p>
+          </div>
+
+          <div
+            class="flex flex-col items-start border-r-[1px] border-dotted px-[12px] border-borderColor"
+          >
+            <p class="font-bold">My Trips</p>
+            <p>Manange your booking</p>
+          </div>
+
+          <div class="flex flex-row">
+            <div
+              class="flex flex-row bg-gradient-to-r from-[#53b2fe] to-[#065af3] py-[10px] px-[10px] rounded-[8px] items-center justify-start after:content-[''] after:border-t-[0px] after:border-r-[2px] after:border-b-[2px] after:border-l-[0px] after:inline-block after:p-[3px] after:rotate-[45deg] after:"
+            >
+              <p class="pr-[25px]">Login or Create Account</p>
+            </div>
+
+            <div
+              class="flex flex-row bg-borderColor py-[10px] px-[20px] rounded-[8px] items-center justify-start after:content-[''] after:border-t-[0px] after:border-r-[2px] after:border-b-[2px] after:border-l-[0px] after:inline-block after:p-[3px] after:rotate-[45deg] after:"
+            >
+              <p class="pr-[25px]">IN | ENG | INR</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="flex flex-col items-center bg-white rounded-xl text-[#7a7a7a] mt-[200px] p-[8px] lg:p-[25px]"
+      >
+        <div
+          class="hidden lg:inline-flex flex-row items-center justify-center shadow-xl rounded-xl relative bg-white p-[20px] top-[-10px] mt-[-100px]"
+        >
+          <div class="inline-flex flex-row gap-[50px]">
+            <div class="flex flex-col items-center justify-center py-[10px]">
+              <div class="w-[50px]">
+                <i class="fa-solid fa-plane-departure fa-2xl"></i>
+              </div>
+
+              <div>flight</div>
+            </div>
+            <div class="flex flex-col items-center justify-center py-[10px]">
+              <div class="w-[50px]">
+                <i class="fa-solid fa-hotel fa-2xl"></i>
+              </div>
+              <div>Hotel</div>
+            </div>
+            <div class="flex flex-col items-center justify-center py-[10px]">
+              <div class="w-[50px]">
+                <i class="fa-solid fa-house fa-2xl"></i>
+              </div>
+              <div>Homestays</div>
+            </div>
+            <div class="flex flex-col items-center justify-center py-[10px]">
+              <div class="w-[50px]">
+                <i class="fa-solid fa-truck-fast fa-2xl"></i>
+              </div>
+              <div>Holiday Packages</div>
+            </div>
+            <div class="flex flex-col items-center justify-center py-[10px]">
+              <div class="w-[50px]">
+                <i class="fa-solid fa-train fa-2xl"></i>
+              </div>
+              <div>Trains</div>
+            </div>
+            <div class="flex flex-col items-center justify-center py-[10px]">
+              <div class="w-[50px]"><i class="fa-solid fa-bus fa-2xl"></i></div>
+              <div>Buses</div>
+            </div>
+            <div class="flex flex-col items-center justify-center py-[10px]">
+              <div class="w-[50px]"><i class="fa-solid fa-cab fa-2xl"></i></div>
+              <div>Cabs</div>
+            </div>
+            <div class="flex flex-col items-center justify-center py-[10px]">
+              <div class="w-[50px]">
+                <i class="fa-solid fa-money-bill fa-2xl"></i>
+              </div>
+              <div>Forex</div>
+            </div>
+            <div class="flex flex-col items-center justify-center py-[10px]">
+              <div class="w-[50px]">
+                <i class="fa-solid fa-plane-up fa-2xl"></i>
+              </div>
+              <div>Charter Flights</div>
+            </div>
+          </div>
+        </div>
+        <form
+          class="flex flex-col w-[100%] mt-[50px] lg:gap-[25px] xl:px-[50px] text-start"
+        >
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-row gap-[15px]">
+              <div class="flex flex-row gap-[5px]">
+                <input type="radio" name="triptype" value="one way" id="one" />
+                <label for="one"> one way </label>
+              </div>
+
+              <div class="flex flex-row gap-[5px]">
+                <input type="radio" name="triptype" value="one way" id="one" />
+                <label for="one"> round trip </label>
+              </div>
+              <div class="flex flex-row gap-[5px]">
+                <input type="radio" name="triptype" value="one way" id="one" />
+                <label for="one"> multi trip </label>
+              </div>
+            </div>
+
+            <div>Book international and Domestic Flights</div>
+          </div>
+          <div class="grid col-span-1 md:grid-cols-2 lg:grid-cols-5">
+            <div
+              class="inline-flex flex-col gap-[5px] justify-start items-start border-[1px] border-solid p-[25px]"
+            >
+              <label for="from" class="text-start font-lato">From</label>
+              <input
+                type="text"
+                value="Bengaluru"
+                class="mt-[20px] text-[22px] font-bold w-[120px]"
+              />
+              <p
+                class="w-[100%] overflow-hidden whitespace-nowrap overflow-ellipsis"
+              >
+                BlR,Bengaluru International Airport India
+              </p>
+            </div>
+
+            <div
+              class="inline-flex flex-col gap-[5px] justify-start items-start border-[1px] border-solid p-[25px]"
+            >
+              <label for="from" class="text-start font-lato">To</label>
+              <input
+                type="text"
+                value="Bengaluru"
+                class="mt-[20px] text-[22px] font-bold w-[250px]"
+              />
+              <p
+                class="w-[100%] overflow-hidden whitespace-nowrap overflow-ellipsis"
+              >
+                PNQ, Punu Air Airport India
+              </p>
+            </div>
+
+            <div
+              class="inline-flex flex-col gap-[5px] justify-start items-start border-[1px] border-solid p-[25px] flex-wrap"
+            >
+              <label
+                for="from"
+                class="text-start font-lato after:content-[''] after:border-t-[0px] after:border-r-[2px] after:border-b-[2px] after:border-l-[0px] after:inline-block after:p-[3px] after:rotate-[45deg] after:relative after:left-[10px] after:bottom-[2px] after:border-colorPrimary"
+                >Departure</label
+              >
+              <input
+                type="text"
+                value="6 Aug's23"
+                class="mt-[20px] text-[22px] font-bold w-[100px]"
+              />
+              <p
+                class="w-[100%] overflow-hidden whitespace-nowrap overflow-ellipsis"
+              >
+                Sunday
+              </p>
+            </div>
+
+            <div
+              class="inline-flex flex-col gap-[5px] justify-start items-start border-[1px] border-solid p-[25px] flex-wrap"
+            >
+              <label
+                for="from"
+                class="text-start font-lato after:content-[''] after:border-t-[0px] after:border-r-[2px] after:border-b-[2px] after:border-l-[0px] after:inline-block after:p-[3px] after:rotate-[45deg] after:relative after:left-[10px] after:bottom-[2px] after:border-colorPrimary"
+                >Return</label
+              >
+              <input
+                type="text"
+                value="6 Aug's23"
+                class="mt-[20px] text-[22px] font-bold w-[100px]"
+              />
+              <p
+                class="w-[100%] overflow-hidden whitespace-nowrap overflow-ellipsis"
+              >
+                Sunday
+              </p>
+            </div>
+
+            <div
+              class="inline-flex flex-col gap-[5px] justify-start items-start border-[1px] border-solid p-[25px] flex-wrap"
+            >
+              <label
+                for="from"
+                class="text-start font-lato after:content-[''] after:border-t-[0px] after:border-r-[2px] after:border-b-[2px] after:border-l-[0px] after:inline-block after:p-[3px] after:rotate-[45deg] after:relative after:left-[10px] after:bottom-[2px] after:border-colorPrimary"
+                >Traellers&Class</label
+              >
+              <input
+                type="text"
+                value="1 Traveller"
+                class="mt-[20px] text-[22px] font-bold w-[100px]"
+              />
+              <p
+                class="w-[100%] overflow-hidden whitespace-nowrap overflow-ellipsis"
+              >
+                Economy/Premium Economy
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col xl:flex-row justify-between items-center">
+            <div class="flex flex-row gap-[10px] items-center">
+              <div class="max-w-[80px] font-bold">Select A Fare Type:</div>
+              <div class="flex flex-col md:flex-row">
+                <div class="flex flex-col md:flex-row gap-[2px]">
+                  <div
+                    class="flex flex-row gap-[2px] bg-[#f2f2f2] px-[4px] rounded-sm items-center"
+                  >
+                    <input
+                      type="radio"
+                      name="triptype"
+                      value="one way"
+                      id="one"
+                    />
+                    <label for="one" class="max-w-[100px]">
+                      Regular Fares
+                    </label>
+                  </div>
+                  <div
+                    class="flex flex-row gap-[2px] bg-[#f2f2f2] px-[4px] rounded-sm items-center"
+                  >
+                    <input
+                      type="radio"
+                      name="triptype"
+                      value="one way"
+                      id="one"
+                    />
+                    <label for="one" class="max-w-[100px]">
+                      Armed Forces Fares
+                    </label>
+                  </div>
+
+                  <div
+                    class="flex flex-row gap-[2px] bg-[#f2f2f2] px-[4px] rounded-sm items-center"
+                  >
+                    <input
+                      type="radio"
+                      name="triptype"
+                      value="one way"
+                      id="one"
+                    />
+                    <label for="one" class="max-w-[100px]">
+                      Student Fares</label
+                    >
+                  </div>
+                  <div
+                    class="flex flex-row gap-[2px] bg-[#f2f2f2] px-[4px] rounded-sm items-center"
+                  >
+                    <input
+                      type="radio"
+                      name="triptype"
+                      value="one way"
+                      id="one"
+                    />
+                    <label for="one" class="max-w-[100px]">
+                      Senior Citizen Fares</label
+                    >
+                  </div>
+                  <div
+                    class="flex flex-row gap-[2px] bg-[#f2f2f2] px-[4px] rounded-sm items-center"
+                  >
+                    <input
+                      type="radio"
+                      name="triptype"
+                      value="one way"
+                      id="one"
+                    />
+                    <label for="one" class="max-w-[100px]"> multi trip </label>
+                  </div>
+
+                  <div
+                    class="flex flex-row gap-[2px] bg-[#f2f2f2] px-[4px] rounded-sm items-center"
+                  >
+                    <input
+                      type="radio"
+                      name="triptype"
+                      value="one way"
+                      id="one"
+                    />
+                    <label for="one" class="max-w-[100px]"> multi trip </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col md:flex-row justify-center gap-[15px] items-center"
+            >
+              <div class="font-bold">Trending Searches:</div>
+              <div
+                class="flex bg-[#f2f2f2] items-center justify-center gap-3 px-[5px] rounded-sm cursor-pointer"
+              >
+                <span>Chennai</span>
+                <span
+                  ><i class="fa-solid fa-arrow-right" style="color: #498bfd"></i
+                ></span>
+                <span>Hyderabad</span>
+              </div>
+
+              <div
+                class="flex bg-[#f2f2f2] items-center justify-center gap-3 px-[5px] rounded-sm cursor-pointer"
+              >
+                <span>Chennai</span>
+                <span
+                  ><i class="fa-solid fa-arrow-right" style="color: #498bfd"></i
+                ></span>
+                <span>Hyderabad</span>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <button
+          class="flex flex-row bg-gradient-to-r from-[#53b2fe] to-[#065af3] py-[10px] px-[50px] rounded-[8px] items-center justify-center relative shadow-xl top-[50px]"
+        >
+          <p class="text-white font-bold">SEARCH</p>
+        </button>
+      </div>
+
+      <div class="flex justify-center mt-[50px] text-white gap-[8px] p-[20px]">
+        <img src="assets/asset 2.png" alt="" />
+        <span>Explore more</span>
+
+        <img src="assets/asset 2.png" alt="" />
+      </div>
+
+      <div
+        class="hidden lg:inline-flex gap-[20px] rounded-full text-start shadow-xl px-[25px] items-center text-[#7a7a7a] bg-white justify-center"
+      >
+        <div class="flex items-center py-[15px] gap-[5px] px-[5px]">
+          <img src="assets/asset 3.png" alt="" />
+          <span>Where2Go</span>
+        </div>
+        <div
+          class="flex items-center py-[15px] gap-[5px] border-l-[1px] px-[5px]"
+        >
+          <img src="assets/asset 4.png" alt="" />
+          <div class="flex flex-col items-start">
+            <span>Insurance</span>
+            <span>For International Trips</span>
+          </div>
+        </div>
+        <div
+          class="flex items-center py-[15px] gap-[5px] border-l-[1px] px-[5px]"
+        >
+          <img src="assets/asset 5.avif" alt="" />
+          <div class="flex flex-col items-start">
+            <span class="text-black">Explore International Flights</span>
+            <span>Cheapest Flights to Paris, Bali, Tokyo & more</span>
+          </div>
+        </div>
+        <div
+          class="flex items-center py-[15px] gap-[5px] border-l-[1px] px-[5px]"
+        >
+          <img src="assets/asset 6.png" alt="" />
+          <div class="flex flex-col items-start">
+            <span>MICE</span>
+            <span>Offsites, Events & Meetings</span>
+          </div>
+        </div>
+        <div
+          class="flex items-center py-[15px] gap-[5px] border-l-[1px] px-[5px]"
+        >
+          <img src="assets/asset 7.png" alt="" />
+
+          <span class="">Gift Cards</span>
+        </div>
+      </div>
+    </header>
+
+    <section
+      class="px-[10px] md:px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[140px]"
+    >
+      <div
+        class="flex flex-col bg-white p-[10px] md:p-[30px] mt-[25px] rounded-xl"
+      >
+        <div
+          class="flex flex-col lg:flex-row gap-[15px] justify-start items-center"
+        >
+          <h2 class="text-[32px] text-[#393939] font-bold">Offers</h2>
+          <div
+            class="flex flex-col md:flex-row gap-[5px] justify-between items-center flex-1 text-[#4a4a4a]"
+          >
+            <div
+              class="hidden sm:flex border-b-[1px] border-[#393939] gap-[5px]"
+            >
+              <span>All Offers</span>
+              <span>Bank Offers</span>
+              <span>Flight</span>
+              <span>Hotels</span>
+              <span>Holidays</span>
+              <span>Trains</span>
+              <span>cabs</span>
+            </div>
+
+            <div
+              class="flex text-colorPrimary items-center justify-center gap-[10px]"
+            >
+              <span class="text-[16px] font-bold">VIEW ALL</span>
+              <span><i class="fa-solid fa-arrow-right-long"></i></span>
+              <div class="flex items-center justify-center gap-[2px]">
+                <button
+                  class="flex items-center justify-center rounded-l-full p-[20px] shadow-lg"
+                >
+                  <div
+                    class="border-l-[1px] border-b-[0px] border-t-[1px] border-r-[0px] w-[10px] h-[10px] rotate-[-45deg] border-solid border-colorPrimary"
+                  ></div>
+                </button>
+                <button
+                  class="flex items-center justify-center rounded-r-full p-[20px] shadow-lg"
+                >
+                  <div
+                    class="border-l-[0px] border-b-[0px] border-t-[1px] border-r-[1px] w-[10px] h-[10px] rotate-45 border-solid border-colorPrimary"
+                  ></div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="scroll-x-rows-2 gap-x-[20px] gap-y-[30px] no-scrollbar p-[20px]"
+        >
+          <div
+            class="flex flex-col items-start shrink-0 shadow-xl rounded-md w-[350px] sm:w-[550px] md:w-[650px] p-[30px]"
+          >
+            <div class="flex gap-[5px] shrink-0">
+              <div class="flex flex-col w-[150px] shrink-0">
+                <img
+                  src="assets/asset 8.avif"
+                  class="w-[134.4px] h-[134px] rounded-md shrink-0"
+                />
+                <span class="text-[12px] text-[#4a4a4a] self-center"
+                  >T&C's Apply</span
+                >
+              </div>
+              <div class="flex flex-col justify-start gap-[10px]">
+                <div class="text-[#4a4a4a] text-[12px]">DOM HOTELS</div>
+                <p class="text-black text-[18px] font-bold">
+                  Grab Up to 45% OFF*
+                </p>
+                <span class="block w-[30px] h-[2px] bg-red-800"></span>
+                <p class="text-[14px] text-[#4a4a4a]">
+                  on Hotels, Homestays & Villas in India & Break Free from Your
+                  Boring Routine NOW!
+                </p>
+                <button
+                  class="text-colorPrimary font-bold text-[14px] inline-flex self-end"
+                >
+                  BOOK NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col shrink-0 items-start shadow-xl rounded-md w-[350px] sm:w-[550px] md:w-[650px] p-[30px]"
+          >
+            <div class="flex gap-[5px]">
+              <div class="flex flex-col w-[150px] shrink-0">
+                <img
+                  src="assets/asset 8.avif"
+                  class="w-[134.4px] h-[134px] rounded-md"
+                />
+                <span class="text-[12px] text-[#4a4a4a] self-center"
+                  >T&C's Apply</span
+                >
+              </div>
+              <div class="flex flex-col justify-start gap-[10px]">
+                <div class="text-[#4a4a4a] text-[12px]">DOM HOTELS</div>
+                <p class="text-black text-[18px] font-bold">
+                  Grab Up to 45% OFF*
+                </p>
+                <span class="block w-[30px] h-[2px] bg-red-800"></span>
+                <p class="text-[14px] text-[#4a4a4a]">
+                  on Hotels, Homestays & Villas in India & Break Free from Your
+                  Boring Routine NOW!
+                </p>
+                <button
+                  class="text-colorPrimary font-bold text-[14px] inline-flex self-end"
+                >
+                  BOOK NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col shrink-0 items-start shadow-xl rounded-md w-[350px] sm:w-[550px] md:w-[650px] p-[30px]"
+          >
+            <div class="flex gap-[5px]">
+              <div class="flex flex-col w-[150px] shrink-0">
+                <img
+                  src="assets/asset 8.avif"
+                  class="w-[134.4px] h-[134px] rounded-md"
+                />
+                <span class="text-[12px] text-[#4a4a4a] self-center"
+                  >T&C's Apply</span
+                >
+              </div>
+              <div class="flex flex-col justify-start gap-[10px]">
+                <div class="text-[#4a4a4a] text-[12px]">DOM HOTELS</div>
+                <p class="text-black text-[18px] font-bold">
+                  Grab Up to 45% OFF*
+                </p>
+                <span class="block w-[30px] h-[2px] bg-red-800"></span>
+                <p class="text-[14px] text-[#4a4a4a]">
+                  on Hotels, Homestays & Villas in India & Break Free from Your
+                  Boring Routine NOW!
+                </p>
+                <button
+                  class="text-colorPrimary font-bold text-[14px] inline-flex self-end"
+                >
+                  BOOK NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col shrink-0 items-start shadow-xl rounded-md w-[350px] sm:w-[550px] md:w-[650px] p-[30px]"
+          >
+            <div class="flex gap-[5px]">
+              <div class="flex flex-col w-[150px] shrink-0">
+                <img
+                  src="assets/asset 8.avif"
+                  class="w-[134.4px] h-[134px] rounded-md"
+                />
+                <span class="text-[12px] text-[#4a4a4a] self-center"
+                  >T&C's Apply</span
+                >
+              </div>
+              <div class="flex flex-col justify-start gap-[10px]">
+                <div class="text-[#4a4a4a] text-[12px]">DOM HOTELS</div>
+                <p class="text-black text-[18px] font-bold">
+                  Grab Up to 45% OFF*
+                </p>
+                <span class="block w-[30px] h-[2px] bg-red-800"></span>
+                <p class="text-[14px] text-[#4a4a4a]">
+                  on Hotels, Homestays & Villas in India & Break Free from Your
+                  Boring Routine NOW!
+                </p>
+                <button
+                  class="text-colorPrimary font-bold text-[14px] inline-flex self-end"
+                >
+                  BOOK NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col shrink-0 items-start shadow-xl rounded-md w-[350px] sm:w-[550px] md:w-[650px] p-[30px]"
+          >
+            <div class="flex gap-[5px]">
+              <div class="flex flex-col w-[150px] shrink-0">
+                <img
+                  src="assets/asset 8.avif"
+                  class="w-[134.4px] h-[134px] rounded-md"
+                />
+                <span class="text-[12px] text-[#4a4a4a] self-center"
+                  >T&C's Apply</span
+                >
+              </div>
+              <div class="flex flex-col justify-start gap-[10px]">
+                <div class="text-[#4a4a4a] text-[12px]">DOM HOTELS</div>
+                <p class="text-black text-[18px] font-bold">
+                  Grab Up to 45% OFF*
+                </p>
+                <span class="block w-[30px] h-[2px] bg-red-800"></span>
+                <p class="text-[14px] text-[#4a4a4a]">
+                  on Hotels, Homestays & Villas in India & Break Free from Your
+                  Boring Routine NOW!
+                </p>
+                <button
+                  class="text-colorPrimary font-bold text-[14px] inline-flex self-end"
+                >
+                  BOOK NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col shrink-0 items-start shadow-xl rounded-md w-[350px] sm:w-[550px] md:w-[650px] p-[30px]"
+          >
+            <div class="flex gap-[5px]">
+              <div class="flex flex-col w-[150px] shrink-0">
+                <img
+                  src="assets/asset 8.avif"
+                  class="w-[134.4px] h-[134px] rounded-md"
+                />
+                <span class="text-[12px] text-[#4a4a4a] self-center"
+                  >T&C's Apply</span
+                >
+              </div>
+              <div class="flex flex-col justify-start gap-[10px]">
+                <div class="text-[#4a4a4a] text-[12px]">DOM HOTELS</div>
+                <p class="text-black text-[18px] font-bold">
+                  Grab Up to 45% OFF*
+                </p>
+                <span class="block w-[30px] h-[2px] bg-red-800"></span>
+                <p class="text-[14px] text-[#4a4a4a]">
+                  on Hotels, Homestays & Villas in India & Break Free from Your
+                  Boring Routine NOW!
+                </p>
+                <button
+                  class="text-colorPrimary font-bold text-[14px] inline-flex self-end"
+                >
+                  BOOK NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex shrink-0 flex-col items-start shadow-xl rounded-md w-[350px] sm:w-[550px] md:w-[650px] p-[30px]"
+          >
+            <div class="flex gap-[5px]">
+              <div class="flex flex-col w-[150px] shrink-0">
+                <img
+                  src="assets/asset 8.avif"
+                  class="w-[134.4px] h-[134px] rounded-md"
+                />
+                <span class="text-[12px] text-[#4a4a4a] self-center"
+                  >T&C's Apply</span
+                >
+              </div>
+              <div class="flex flex-col justify-start gap-[10px]">
+                <div class="text-[#4a4a4a] text-[12px]">DOM HOTELS</div>
+                <p class="text-black text-[18px] font-bold">
+                  Grab Up to 45% OFF*
+                </p>
+                <span class="block w-[30px] h-[2px] bg-red-800"></span>
+                <p class="text-[14px] text-[#4a4a4a]">
+                  on Hotels, Homestays & Villas in India & Break Free from Your
+                  Boring Routine NOW!
+                </p>
+                <button
+                  class="text-colorPrimary font-bold text-[14px] inline-flex self-end"
+                >
+                  BOOK NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col shrink-0 items-start rounded-md w-[350px] sm:w-[550px] md:w-[650px] p-[30px]"
+          >
+            <div class="flex gap-[5px] shrink-0">
+              <div class="flex flex-col w-[150px] shrink-0">
+                <img
+                  src="assets/asset 8.avif"
+                  class="w-[134.4px] h-[134px] rounded-md"
+                />
+                <span class="text-[12px] text-[#4a4a4a] self-center"
+                  >T&C's Apply</span
+                >
+              </div>
+              <div class="flex flex-col justify-start gap-[10px]">
+                <div class="text-[#4a4a4a] text-[12px]">DOM HOTELS</div>
+                <p class="text-black text-[18px] font-bold">
+                  Grab Up to 45% OFF*
+                </p>
+                <span class="block w-[30px] h-[2px] bg-red-800"></span>
+                <p class="text-[14px] text-[#4a4a4a]">
+                  on Hotels, Homestays & Villas in India & Break Free from Your
+                  Boring Routine NOW!
+                </p>
+                <button
+                  class="text-colorPrimary font-bold text-[14px] inline-flex self-end"
+                >
+                  BOOK NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="px-[10px] md:px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[140px] mt-[30px]"
+    >
+      <div class="flex flex-row relative bg-transparent">
+        <button
+          class="rounded-full flex justify-center items-center w-[40px] h-[40px] bg-white shadow-2xl absolute left-[-10px] sm:left-[-20px] top-[35%] bottom-[50%] z-[1] text-colorPrimary"
+        >
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+
+        <div
+          class="grid grid-rows-1 grid-flow-col overflow-scroll no-scrollbar gap-x-[25px]"
+        >
+          <div
+            class="flex shrink-0 bg-white shadow-lg p-[10px] w-[350px] sm:w-[390px] sm:p-[25px] rounded-md justify-center items-center gap-[10px]"
+          >
+            <img src="assets/asset 15.avif" alt="" />
+            <p>
+              We are now available in हिंदी!
+              <br />
+              <a>Change Language</a>
+            </p>
+          </div>
+
+          <div
+            class="flex shrink-0 bg-white shadow-lg p-[10px] w-[350px] sm:w-[390px] sm:p-[25px] rounded-md justify-center items-center gap-[10px]"
+          >
+            <img src="assets/asset 15.avif" alt="" />
+            <p>
+              We are now available in हिंदी!
+              <br />
+              <a>Change Language</a>
+            </p>
+          </div>
+
+          <div
+            class="flex shrink-0 bg-white shadow-lg p-[10px] w-[350px] sm:w-[390px] sm:p-[25px] rounded-md justify-center items-center gap-[10px]"
+          >
+            <img src="assets/asset 15.avif" alt="" />
+            <p>
+              We are now available in हिंदी!
+              <br />
+              <a>Change Language</a>
+            </p>
+          </div>
+
+          <div
+            class="flex shrink-0 bg-white shadow-lg p-[10px] w-[350px] sm:w-[390px] sm:p-[25px] rounded-md justify-center items-center gap-[10px]"
+          >
+            <img src="assets/asset 15.avif" alt="" />
+            <p>
+              We are now available in हिंदी!
+              <br />
+              <a>Change Language</a>
+            </p>
+          </div>
+
+          <div
+            class="flex shrink-0 bg-white shadow-lg p-[10px] w-[350px] sm:w-[390px] sm:p-[25px] rounded-md justify-center items-center gap-[10px]"
+          >
+            <img src="assets/asset 15.avif" alt="" />
+            <p>
+              We are now available in हिंदी!
+              <br />
+              <a>Change Language</a>
+            </p>
+          </div>
+        </div>
+
+        <button
+          class="rounded-full flex justify-center items-center w-[40px] h-[40px] bg-white shadow-2xl absolute right-[-10px] sm:right-[-20px] top-[35%] bottom-[50%] z-[1] text-colorPrimary"
+        >
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <section
+      class="px-[10px] md:px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[140px] mt-[30px]"
+    >
+      <div
+        class="flex bg-white rounded-md p-[10px] sm:p-[15px] md:p-[25px] justify-between flex-wrap gap-[30px]"
+      >
+        <div class="flex flex-col gap-[35px]">
+          <div class="flex gap-[10px]">
+            <div
+              class="w-[96px] h-[96px] bg-googleSprit bg-giftIcon bg-googleImageSize shrink-0"
+              alt=""
+            ></div>
+            <div class="flex flex-col">
+              <h3 class="text-[32px] text-black font-bold">
+                Download App Now !
+              </h3>
+              <p class="text-[#4a4a4a]">
+                Use code <b class="text-black">WELCOMEMMT</b> and get
+                <b class="text-black">FLAT 12%</b> OFF* on your first domestic
+                flight booking
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-row">
+            <div
+              class="flex flex-row border-[1px] border-[#4a4a4a] sm:px-[15px] sm:py-[10px] gap-[2px] rounded-tl-lg rounded-bl-lg items-center"
+            >
+              <img
+                src="assets/asset 17.png"
+                alt=""
+                class="hidden sm:block w-[23px] h-[19px]"
+              />
+              <span class="hidden sm:inline">+91 &nbsp; —</span>
+              <input
+                type="text"
+                placeholder="Enter Mobile number"
+                class="border-transparent focus:border-transparent focus:ring-0 !outline-none px-[5px]"
+              />
+            </div>
+            <button
+              class="bg-transparent text-colorPrimary px-[15px] py-[10px] border-[1px] border-colorPrimary rounded-tr-lg rounded-br-lg"
+            >
+              GET APP LINK
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-[20px]">
+          <div class="flex flex-col gap-[20px]">
+            <div
+              class="w-[149px] h-[44px] bg-googleSprit bg-google bg-googleImageSize"
+              alt=""
+            ></div>
+
+            <div
+              class="w-[149px] h-[44px] bg-googleSprit bg-apple bg-googleImageSize"
+              alt=""
+            ></div>
+          </div>
+          <img src="assets/asset 18.avif" class="w-[105px] h-[105px]" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="px-[10px] md:px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[140px]"
+    >
+      <div
+        class="flex flex-col bg-white p-[10px] md:p-[30px] mt-[25px] rounded-xl gap-[30px]"
+      >
+        <div
+          class="flex flex-col lg:flex-row gap-[15px] justify-between items-center"
+        >
+          <h2 class="text-[32px] text-[#393939] font-bold">
+            Handpicked Collections for You
+          </h2>
+
+          <div
+            class="flex text-colorPrimary items-center justify-center gap-[10px]"
+          >
+            <div class="flex items-center justify-center gap-[2px]">
+              <button
+                class="flex items-center justify-center rounded-l-full p-[20px] shadow-lg"
+              >
+                <div
+                  class="border-l-[1px] border-b-[0px] border-t-[1px] border-r-[0px] w-[10px] h-[10px] rotate-[-45deg] border-solid border-colorPrimary"
+                ></div>
+              </button>
+              <button
+                class="flex items-center justify-center rounded-r-full p-[20px] shadow-lg"
+              >
+                <div
+                  class="border-l-[0px] border-b-[0px] border-t-[1px] border-r-[1px] w-[10px] h-[10px] rotate-45 border-solid border-colorPrimary"
+                ></div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex shrink-0 overflow-scroll gap-[30px] no-scrollbar">
+          <div class="flex flex-col items-center justify-center shrink-0">
+            <div
+              class="w-[calc(100%-48px)] h-[10px] bg-[#f5f5f5] rounded-none rounded-tl-[10px] rounded-tr-[10px] shrink-0"
+            ></div>
+            <div
+              class="w-[calc(100%-24px)] h-[10px] bg-[#dcdcdc] rounded-none rounded-tl-[10px] rounded-tr-[10px] shrink-0"
+            ></div>
+            <div
+              class="rounded-md relative bg-card overflow-hidden w-[200px] h-[231px] shrink-0"
+            >
+              <div
+                class="flex flex-col p-[12px] justify-end items-start bg-black w-[100%] h-[100%] bg-opacity-[0.3]"
+              >
+                <div
+                  class="bg-white inline-flex py-[2px] px-[9px] w-[66px] font-bold text-[14px] font-lato justify-center items-center rounded-full"
+                >
+                  TOP 8
+                </div>
+                <p class="text-white font-bold text-[16px] font-lato">
+                  Stays in & Around Delhi for a Weekend Getaway
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center shrink-0">
+            <div
+              class="w-[calc(100%-48px)] h-[10px] bg-[#f5f5f5] rounded-none rounded-tl-[10px] rounded-tr-[10px] shrink-0"
+            ></div>
+            <div
+              class="w-[calc(100%-24px)] h-[10px] bg-[#dcdcdc] rounded-none rounded-tl-[10px] rounded-tr-[10px] shrink-0"
+            ></div>
+            <div
+              class="rounded-md relative bg-card overflow-hidden w-[200px] h-[231px] shrink-0"
+            >
+              <div
+                class="flex flex-col p-[12px] justify-end items-start bg-black w-[100%] h-[100%] bg-opacity-[0.3]"
+              >
+                <div
+                  class="bg-white inline-flex py-[2px] px-[9px] w-[66px] font-bold text-[14px] font-lato justify-center items-center rounded-full"
+                >
+                  TOP 8
+                </div>
+                <p class="text-white font-bold text-[16px] font-lato">
+                  Stays in & Around Delhi for a Weekend Getaway
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center shrink-0">
+            <div
+              class="w-[calc(100%-48px)] h-[10px] bg-[#f5f5f5] rounded-none rounded-tl-[10px] rounded-tr-[10px] shrink-0"
+            ></div>
+            <div
+              class="w-[calc(100%-24px)] h-[10px] bg-[#dcdcdc] rounded-none rounded-tl-[10px] rounded-tr-[10px] shrink-0"
+            ></div>
+            <div
+              class="rounded-md relative bg-card overflow-hidden w-[200px] h-[231px] shrink-0"
+            >
+              <div
+                class="flex flex-col p-[12px] justify-end items-start bg-black w-[100%] h-[100%] bg-opacity-[0.3]"
+              >
+                <div
+                  class="bg-white inline-flex py-[2px] px-[9px] w-[66px] font-bold text-[14px] font-lato justify-center items-center rounded-full"
+                >
+                  TOP 8
+                </div>
+                <p class="text-white font-bold text-[16px] font-lato">
+                  Stays in & Around Delhi for a Weekend Getaway
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center shrink-0">
+            <div
+              class="w-[calc(100%-48px)] h-[10px] bg-[#f5f5f5] rounded-none rounded-tl-[10px] rounded-tr-[10px] shrink-0"
+            ></div>
+            <div
+              class="w-[calc(100%-24px)] h-[10px] bg-[#dcdcdc] rounded-none rounded-tl-[10px] rounded-tr-[10px] shrink-0"
+            ></div>
+            <div
+              class="rounded-md relative bg-card overflow-hidden w-[200px] h-[231px] shrink-0"
+            >
+              <div
+                class="flex flex-col p-[12px] justify-end items-start bg-black w-[100%] h-[100%] bg-opacity-[0.3]"
+              >
+                <div
+                  class="bg-white inline-flex py-[2px] px-[9px] w-[66px] font-bold text-[14px] font-lato justify-center items-center rounded-full"
+                >
+                  TOP 8
+                </div>
+                <p class="text-white font-bold text-[16px] font-lato">
+                  Stays in & Around Delhi for a Weekend Getaway
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center shrink-0">
+            <div
+              class="w-[calc(100%-48px)] h-[10px] bg-[#f5f5f5] rounded-none rounded-tl-[10px] rounded-tr-[10px] shrink-0"
+            ></div>
+            <div
+              class="w-[calc(100%-24px)] h-[10px] bg-[#dcdcdc] rounded-none rounded-tl-[10px] rounded-tr-[10px] shrink-0"
+            ></div>
+            <div
+              class="rounded-md relative bg-card overflow-hidden w-[200px] h-[231px] shrink-0"
+            >
+              <div
+                class="flex flex-col p-[12px] justify-end items-start bg-black w-[100%] h-[100%] bg-opacity-[0.3]"
+              >
+                <div
+                  class="bg-white inline-flex py-[2px] px-[9px] w-[66px] font-bold text-[14px] font-lato justify-center items-center rounded-full"
+                >
+                  TOP 8
+                </div>
+                <p class="text-white font-bold text-[16px] font-lato">
+                  Stays in & Around Delhi for a Weekend Getaway
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center shrink-0">
+            <div
+              class="w-[calc(100%-48px)] h-[10px] bg-[#f5f5f5] rounded-none rounded-tl-[10px] rounded-tr-[10px] shrink-0"
+            ></div>
+            <div
+              class="w-[calc(100%-24px)] h-[10px] bg-[#dcdcdc] rounded-none rounded-tl-[10px] rounded-tr-[10px] shrink-0"
+            ></div>
+            <div
+              class="rounded-md relative bg-card overflow-hidden w-[200px] h-[231px] shrink-0"
+            >
+              <div
+                class="flex flex-col p-[12px] justify-end items-start bg-black w-[100%] h-[100%] bg-opacity-[0.3]"
+              >
+                <div
+                  class="bg-white inline-flex py-[2px] px-[9px] w-[66px] font-bold text-[14px] font-lato justify-center items-center rounded-full"
+                >
+                  TOP 8
+                </div>
+                <p class="text-white font-bold text-[16px] font-lato">
+                  Stays in & Around Delhi for a Weekend Getaway
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center shrink-0">
+            <div
+              class="w-[calc(100%-48px)] h-[10px] bg-[#f5f5f5] rounded-none rounded-tl-[10px] rounded-tr-[10px] shrink-0"
+            ></div>
+            <div
+              class="w-[calc(100%-24px)] h-[10px] bg-[#dcdcdc] rounded-none rounded-tl-[10px] rounded-tr-[10px] shrink-0"
+            ></div>
+            <div
+              class="rounded-md relative bg-card overflow-hidden w-[200px] h-[231px] shrink-0"
+            >
+              <div
+                class="flex flex-col p-[12px] justify-end items-start bg-black w-[100%] h-[100%] bg-opacity-[0.3]"
+              >
+                <div
+                  class="bg-white inline-flex py-[2px] px-[9px] w-[66px] font-bold text-[14px] font-lato justify-center items-center rounded-full"
+                >
+                  TOP 8
+                </div>
+                <p class="text-white font-bold text-[16px] font-lato">
+                  Stays in & Around Delhi for a Weekend Getaway
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="px-[10px] md:px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[140px]"
+    >
+      <div
+        class="flex flex-col bg-white p-[10px] md:p-[30px] mt-[25px] rounded-xl gap-[30px]"
+      >
+        <div
+          class="flex flex-col lg:flex-row gap-[15px] justify-between items-center"
+        >
+          <h2 class="text-[32px] text-[#393939] font-bold">
+            Unlock Lesser-Known Wonders of India
+          </h2>
+
+          <div
+            class="flex text-colorPrimary items-center justify-center gap-[10px]"
+          >
+            <div class="flex items-center justify-center gap-[2px]">
+              <button
+                class="flex items-center justify-center rounded-l-full p-[20px] shadow-lg"
+              >
+                <div
+                  class="border-l-[1px] border-b-[0px] border-t-[1px] border-r-[0px] w-[10px] h-[10px] rotate-[-45deg] border-solid border-colorPrimary"
+                ></div>
+              </button>
+              <button
+                class="flex items-center justify-center rounded-r-full p-[20px] shadow-lg"
+              >
+                <div
+                  class="border-l-[0px] border-b-[0px] border-t-[1px] border-r-[1px] w-[10px] h-[10px] rotate-45 border-solid border-colorPrimary"
+                ></div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex shrink-0 overflow-scroll gap-[30px] no-scrollbar">
+          <div class="flex flex-col items-center justify-center shrink-0">
+            <div
+              class="rounded-md relative bg-card overflow-hidden w-[200px] h-[231px] shrink-0"
+            >
+              <div
+                class="flex flex-col p-[12px] justify-end items-start bg-black w-[100%] h-[100%] bg-opacity-[0.3]"
+              >
+                <p class="text-white font-bold text-[16px] font-lato">
+                  Stays in & Around Delhi for a Weekend Getaway
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center shrink-0">
+            <div
+              class="rounded-md relative bg-card overflow-hidden w-[200px] h-[231px] shrink-0"
+            >
+              <div
+                class="flex flex-col p-[12px] justify-end items-start bg-black w-[100%] h-[100%] bg-opacity-[0.3]"
+              >
+                <p class="text-white font-bold text-[16px] font-lato">
+                  Stays in & Around Delhi for a Weekend Getaway
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center shrink-0">
+            <div
+              class="rounded-md relative bg-card overflow-hidden w-[200px] h-[231px] shrink-0"
+            >
+              <div
+                class="flex flex-col p-[12px] justify-end items-start bg-black w-[100%] h-[100%] bg-opacity-[0.3]"
+              >
+                <p class="text-white font-bold text-[16px] font-lato">
+                  Stays in & Around Delhi for a Weekend Getaway
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center shrink-0">
+            <div
+              class="rounded-md relative bg-card overflow-hidden w-[200px] h-[231px] shrink-0"
+            >
+              <div
+                class="flex flex-col p-[12px] justify-end items-start bg-black w-[100%] h-[100%] bg-opacity-[0.3]"
+              >
+                <p class="text-white font-bold text-[16px] font-lato">
+                  Stays in & Around Delhi for a Weekend Getaway
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center shrink-0">
+            <div
+              class="rounded-md relative bg-card overflow-hidden w-[200px] h-[231px] shrink-0"
+            >
+              <div
+                class="flex flex-col p-[12px] justify-end items-start bg-black w-[100%] h-[100%] bg-opacity-[0.3]"
+              >
+                <p class="text-white font-bold text-[16px] font-lato">
+                  Stays in & Around Delhi for a Weekend Getaway
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center shrink-0">
+            <div
+              class="rounded-md relative bg-card overflow-hidden w-[200px] h-[231px] shrink-0"
+            >
+              <div
+                class="flex flex-col p-[12px] justify-end items-start bg-black w-[100%] h-[100%] bg-opacity-[0.3]"
+              >
+                <p class="text-white font-bold text-[16px] font-lato">
+                  Stays in & Around Delhi for a Weekend Getaway
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center shrink-0">
+            <div
+              class="rounded-md relative bg-card overflow-hidden w-[200px] h-[231px] shrink-0"
+            >
+              <div
+                class="flex flex-col p-[12px] justify-end items-start bg-black w-[100%] h-[100%] bg-opacity-[0.3]"
+              >
+                <p class="text-white font-bold text-[16px] font-lato">
+                  Stays in & Around Delhi for a Weekend Getaway
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="px-[10px] md:px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[140px]"
+    >
+      <div
+        class="flex flex-col justify-center sm:flex-row border-red-400 border-[1px] border-l-[30px] items-center sm:justify-between pr-[25px] py-[10px] bg-white mt-[30px] rounded-xl"
+      >
+        <div class="flex gap-[10px] relative left-[-10px]">
+          <img
+            src="https://www.tripmoney.com/ext/static/TravelLoan/travelLoan.png"
+            class="w-[61px] h-[61px]"
+            alt=""
+          />
+          <div class="flex flex-col">
+            <span>TripMoney</span>
+            <p class="font-[900] text-[18px]">
+              Forex
+              <span class="font-normal">
+                at best exchange rates delivered at your doorstep</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex text-colorPrimary items-center justify-center gap-[10px]"
+        >
+          <span class="text-[16px] font-bold">ORDER NOW</span>
+          <span><i class="fa-solid fa-arrow-right-long"></i></span>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="px-[10px] md:px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[140px]"
+    >
+      <div class="flex flex-col p-[25px] gap-[15px] my-[50px]">
+        <h3 class="text-[10px] font-[900]">PRODUCT OFFERING</h3>
+        <ul class="flex flex-wrap text-[#4a4a4a] text-[12px] font-lato">
+          <li data-cy="Flights-00">
+            <a data-cy="anchor-Flights-00">Flights</a>,&nbsp;
+          </li>
+          <li data-cy="International Flights-01">
+            <a data-cy="anchor-International Flights-01"
+              >International Flights</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Charter Flights-02">
+            <a data-cy="anchor-Charter Flights-02">Charter Flights</a>,&nbsp;
+          </li>
+          <li data-cy="Hotels-03">
+            <a data-cy="anchor-Hotels-03">Hotels</a>,&nbsp;
+          </li>
+          <li data-cy="International Hotels-04">
+            <a data-cy="anchor-International Hotels-04">International Hotels</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Homestays and Villas-05">
+            <a data-cy="anchor-Homestays and Villas-05">Homestays and Villas</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Activities-06">
+            <a data-cy="anchor-Activities-06">Activities</a>,&nbsp;
+          </li>
+          <li data-cy="Holidays In India-07">
+            <a data-cy="anchor-Holidays In India-07">Holidays In India</a
+            >,&nbsp;
+          </li>
+          <li data-cy="International Holidays-08">
+            <a data-cy="anchor-International Holidays-08"
+              >International Holidays</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Book Hotels From UAE-09">
+            <a data-cy="anchor-Book Hotels From UAE-09">Book Hotels From UAE</a
+            >,&nbsp;
+          </li>
+          <li data-cy="myBiz for Corporate Travel-010">
+            <a data-cy="anchor-myBiz for Corporate Travel-010"
+              >myBiz for Corporate Travel</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Book Online Cabs-011">
+            <a data-cy="anchor-Book Online Cabs-011">Book Online Cabs</a>,&nbsp;
+          </li>
+          <li data-cy="Book Bus Tickets-012">
+            <a data-cy="anchor-Book Bus Tickets-012">Book Bus Tickets</a>,&nbsp;
+          </li>
+          <li data-cy="Book Train Tickets-013">
+            <a data-cy="anchor-Book Train Tickets-013">Book Train Tickets</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Cheap Tickets to India-014">
+            <a data-cy="anchor-Cheap Tickets to India-014"
+              >Cheap Tickets to India</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Book Flights From US-015">
+            <a data-cy="anchor-Book Flights From US-015">Book Flights From US</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Book Flights From UAE-016">
+            <a data-cy="anchor-Book Flights From UAE-016"
+              >Book Flights From UAE</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Trip Planner-017">
+            <a data-cy="anchor-Trip Planner-017">Trip Planner</a>,&nbsp;
+          </li>
+          <li data-cy="Gift Cards-018">
+            <a data-cy="anchor-Gift Cards-018">Gift Cards</a>,&nbsp;
+          </li>
+          <li data-cy="Trip Money-019">
+            <a data-cy="anchor-Trip Money-019">Trip Money</a>,&nbsp;
+          </li>
+          <li data-cy="Trip Ideas-020">
+            <a data-cy="anchor-Trip Ideas-020">Trip Ideas</a>,&nbsp;
+          </li>
+          <li data-cy="Travel Blog-021">
+            <a data-cy="anchor-Travel Blog-021">Travel Blog</a>,&nbsp;
+          </li>
+          <li data-cy="PNR Status-022">
+            <a data-cy="anchor-PNR Status-022">PNR Status</a>,&nbsp;
+          </li>
+          <li data-cy="MakeMyTrip Advertising Solutions-023">
+            <a data-cy="anchor-MakeMyTrip Advertising Solutions-023"
+              >MakeMyTrip Advertising Solutions</a
+            >,&nbsp;
+          </li>
+          <li data-cy="One Way Cab-024">
+            <a data-cy="anchor-One Way Cab-024">One Way Cab</a>
+          </li>
+        </ul>
+
+        <h3 class="text-[10px] font-[900]">MAKEMYTRIP</h3>
+        <ul class="flex flex-wrap text-[#4a4a4a] text-[12px] font-lato">
+          <li data-cy="About Us-10">
+            <a data-cy="anchor-About Us-10">About Us</a>,&nbsp;
+          </li>
+          <li data-cy="Investor Relations-11">
+            <a data-cy="anchor-Investor Relations-11">Investor Relations</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Careers-12">
+            <a data-cy="anchor-Careers-12">Careers</a>,&nbsp;
+          </li>
+          <li data-cy="MMT Foundation-13">
+            <a data-cy="anchor-MMT Foundation-13">MMT Foundation</a>,&nbsp;
+          </li>
+          <li data-cy="CSR Policy-14">
+            <a data-cy="anchor-CSR Policy-14">CSR Policy</a>,&nbsp;
+          </li>
+          <li data-cy="myPartner - Travel Agent Portal-15">
+            <a data-cy="anchor-myPartner - Travel Agent Portal-15"
+              >myPartner - Travel Agent Portal</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Foreign Exchange-16">
+            <a data-cy="anchor-Foreign Exchange-16">Foreign Exchange</a>,&nbsp;
+          </li>
+          <li data-cy="List your hotel-17">
+            <a data-cy="anchor-List your hotel-17">List your hotel</a>,&nbsp;
+          </li>
+          <li data-cy="Partners- Redbus-18">
+            <a data-cy="anchor-Partners- Redbus-18">Partners- Redbus</a>,&nbsp;
+          </li>
+          <li data-cy="Partners- Goibibo-19">
+            <a data-cy="anchor-Partners- Goibibo-19">Partners- Goibibo</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Advertise with Us-110">
+            <a data-cy="anchor-Advertise with Us-110">Advertise with Us</a
+            >,&nbsp;
+          </li>
+          <li data-cy="RedBus Ferry Malaysia-111">
+            <a data-cy="anchor-RedBus Ferry Malaysia-111"
+              >RedBus Ferry Malaysia</a
+            >,&nbsp;
+          </li>
+          <li data-cy="RedBus Ferry Singapore-112">
+            <a data-cy="anchor-RedBus Ferry Singapore-112"
+              >RedBus Ferry Singapore</a
+            >
+          </li>
+        </ul>
+
+        <h3 class="text-[10px] font-[900]">ABOUT THE SITE</h3>
+
+        <ul class="flex flex-wrap text-[#4a4a4a] text-[12px] font-lato">
+          <li data-cy="Customer Support-20">
+            <a data-cy="anchor-Customer Support-20">Customer Support</a>,&nbsp;
+          </li>
+          <li data-cy="Payment Security-21">
+            <a data-cy="anchor-Payment Security-21">Payment Security</a>,&nbsp;
+          </li>
+          <li data-cy="Privacy Policy-22">
+            <a data-cy="anchor-Privacy Policy-22">Privacy Policy</a>,&nbsp;
+          </li>
+          <li data-cy="User Agreement-23">
+            <a data-cy="anchor-User Agreement-23">User Agreement</a>,&nbsp;
+          </li>
+          <li data-cy="Terms of Service-24">
+            <a data-cy="anchor-Terms of Service-24">Terms of Service</a>,&nbsp;
+          </li>
+          <li data-cy="More Offices-25">
+            <a data-cy="anchor-More Offices-25">More Offices</a>,&nbsp;
+          </li>
+          <li data-cy="Make A Payment-26">
+            <a data-cy="anchor-Make A Payment-26">Make A Payment</a>,&nbsp;
+          </li>
+          <li data-cy="Work From Home-27">
+            <a data-cy="anchor-Work From Home-27">Work From Home</a>,&nbsp;
+          </li>
+          <li data-cy="Report Security Issues-28">
+            <a data-cy="anchor-Report Security Issues-28"
+              >Report Security Issues</a
+            >
+          </li>
+        </ul>
+
+        <h3 class="text-[10px] font-[900]">TOP HOTELS IN INDIA</h3>
+        <ul class="flex flex-wrap text-[#4a4a4a] text-[12px] font-lato">
+          <li data-cy="Fairmont Jaipur-30">
+            <a data-cy="anchor-Fairmont Jaipur-30">Fairmont Jaipur</a>,&nbsp;
+          </li>
+          <li data-cy="St Regis Goa-31">
+            <a data-cy="anchor-St Regis Goa-31">St Regis Goa</a>,&nbsp;
+          </li>
+          <li data-cy="Six Senses Fort Barwara-32">
+            <a data-cy="anchor-Six Senses Fort Barwara-32"
+              >Six Senses Fort Barwara</a
+            >,&nbsp;
+          </li>
+          <li data-cy="W Goa-33">
+            <a data-cy="anchor-W Goa-33">W Goa</a>,&nbsp;
+          </li>
+          <li data-cy="Grand Hyatt Goa-34">
+            <a data-cy="anchor-Grand Hyatt Goa-34">Grand Hyatt Goa</a>,&nbsp;
+          </li>
+          <li data-cy="Shangri-La Bangalore-35">
+            <a data-cy="anchor-Shangri-La Bangalore-35">Shangri-La Bangalore</a
+            >,&nbsp;
+          </li>
+          <li data-cy="The St Regis Mumbai-36">
+            <a data-cy="anchor-The St Regis Mumbai-36">The St Regis Mumbai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Taj Rishikesh-37">
+            <a data-cy="anchor-Taj Rishikesh-37">Taj Rishikesh</a>,&nbsp;
+          </li>
+          <li data-cy="Grand Hyatt Mumbai-38">
+            <a data-cy="anchor-Grand Hyatt Mumbai-38">Grand Hyatt Mumbai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Le Meridien Delhi-39">
+            <a data-cy="anchor-Le Meridien Delhi-39">Le Meridien Delhi</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Rambagh Palace Jaipur-310">
+            <a data-cy="anchor-Rambagh Palace Jaipur-310"
+              >Rambagh Palace Jaipur</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Leela Palace Chennai-311">
+            <a data-cy="anchor-Leela Palace Chennai-311">Leela Palace Chennai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="The Leela Palace Udaipur-312">
+            <a data-cy="anchor-The Leela Palace Udaipur-312"
+              >The Leela Palace Udaipur</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Taj Lake Palace Udaipur-313">
+            <a data-cy="anchor-Taj Lake Palace Udaipur-313"
+              >Taj Lake Palace Udaipur</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Jw Marriott Chandigarh-314">
+            <a data-cy="anchor-Jw Marriott Chandigarh-314"
+              >Jw Marriott Chandigarh</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Alila Diwa Goa-315">
+            <a data-cy="anchor-Alila Diwa Goa-315">Alila Diwa Goa</a>,&nbsp;
+          </li>
+          <li data-cy="Le Meridien Goa-316">
+            <a data-cy="anchor-Le Meridien Goa-316">Le Meridien Goa</a>,&nbsp;
+          </li>
+          <li data-cy="Taj Lands End Mumbai-317">
+            <a data-cy="anchor-Taj Lands End Mumbai-317">Taj Lands End Mumbai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Itc Grand Chola Chennai-318">
+            <a data-cy="anchor-Itc Grand Chola Chennai-318"
+              >Itc Grand Chola Chennai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Itc Maratha Mumbai-319">
+            <a data-cy="anchor-Itc Maratha Mumbai-319">Itc Maratha Mumbai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Oberoi Udaivilas-320">
+            <a data-cy="anchor-Oberoi Udaivilas-320">Oberoi Udaivilas</a>,&nbsp;
+          </li>
+          <li data-cy="Jai Mahal Palace Jaipur-321">
+            <a data-cy="anchor-Jai Mahal Palace Jaipur-321"
+              >Jai Mahal Palace Jaipur</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Taj Mahal Tower Mumbai-322">
+            <a data-cy="anchor-Taj Mahal Tower Mumbai-322"
+              >Taj Mahal Tower Mumbai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Marriott Suites Pune-323">
+            <a data-cy="anchor-Marriott Suites Pune-323">Marriott Suites Pune</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Park Hyatt Chennai-324">
+            <a data-cy="anchor-Park Hyatt Chennai-324">Park Hyatt Chennai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="The Leela Palace Jaipur-325">
+            <a data-cy="anchor-The Leela Palace Jaipur-325"
+              >The Leela Palace Jaipur</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Jw Marriott Mumbai Sahar-326">
+            <a data-cy="anchor-Jw Marriott Mumbai Sahar-326"
+              >Jw Marriott Mumbai Sahar</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Jw Marriott Mumbai Juhu-327">
+            <a data-cy="anchor-Jw Marriott Mumbai Juhu-327"
+              >Jw Marriott Mumbai Juhu</a
+            >,&nbsp;
+          </li>
+          <li data-cy="The Ritz Carlton Bengaluru-328">
+            <a data-cy="anchor-The Ritz Carlton Bengaluru-328"
+              >The Ritz Carlton Bengaluru</a
+            >,&nbsp;
+          </li>
+          <li data-cy="The Oberoi New Delhi-329">
+            <a data-cy="anchor-The Oberoi New Delhi-329">The Oberoi New Delhi</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Taj Resort &amp; Convention Centre Goa-330">
+            <a data-cy="anchor-Taj Resort &amp; Convention Centre Goa-330"
+              >Taj Resort &amp; Convention Centre Goa</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Taj Bengal Kolkata-331">
+            <a data-cy="anchor-Taj Bengal Kolkata-331">Taj Bengal Kolkata</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Taj Coromandel Chennai-332">
+            <a data-cy="anchor-Taj Coromandel Chennai-332"
+              >Taj Coromandel Chennai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="The Oberoi Gurgaon-333">
+            <a data-cy="anchor-The Oberoi Gurgaon-333">The Oberoi Gurgaon</a
+            >,&nbsp;
+          </li>
+          <li data-cy="The Westin Goa-334">
+            <a data-cy="anchor-The Westin Goa-334">The Westin Goa</a>,&nbsp;
+          </li>
+          <li data-cy="Jw Marriott Hotel Pune-335">
+            <a data-cy="anchor-Jw Marriott Hotel Pune-335"
+              >Jw Marriott Hotel Pune</a
+            >,&nbsp;
+          </li>
+          <li data-cy="The Leela Palace New Delhi-336">
+            <a data-cy="anchor-The Leela Palace New Delhi-336"
+              >The Leela Palace New Delhi</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Taj West End Bengaluru-337">
+            <a data-cy="anchor-Taj West End Bengaluru-337"
+              >Taj West End Bengaluru</a
+            >,&nbsp;
+          </li>
+          <li data-cy="The Taj Mahal Palace Mumbai-338">
+            <a data-cy="anchor-The Taj Mahal Palace Mumbai-338"
+              >The Taj Mahal Palace Mumbai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Best Hotels in India-339">
+            <a data-cy="anchor-Best Hotels in India-339"
+              >Best Hotels in India</a
+            >
+          </li>
+        </ul>
+
+        <h3 class="text-[10px] font-[900]">TOP INTERNATIONAL HOTELS</h3>
+
+        <ul class="flex flex-wrap text-[#4a4a4a] text-[12px] font-lato">
+          <li data-cy="Adaaran Club Rannalhi-40">
+            <a data-cy="anchor-Adaaran Club Rannalhi-40"
+              >Adaaran Club Rannalhi</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Marina Bay Sands Singapore-41">
+            <a data-cy="anchor-Marina Bay Sands Singapore-41"
+              >Marina Bay Sands Singapore</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Coco Bodu Hithi-42">
+            <a data-cy="anchor-Coco Bodu Hithi-42">Coco Bodu Hithi</a>,&nbsp;
+          </li>
+          <li data-cy="Taj Dubai-43">
+            <a data-cy="anchor-Taj Dubai-43">Taj Dubai</a>,&nbsp;
+          </li>
+          <li data-cy="Atlantis Hotel Dubai-44">
+            <a data-cy="anchor-Atlantis Hotel Dubai-44">Atlantis Hotel Dubai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Amari Phuket-45">
+            <a data-cy="anchor-Amari Phuket-45">Amari Phuket</a>,&nbsp;
+          </li>
+          <li data-cy="Jw Marriott Dubai-46">
+            <a data-cy="anchor-Jw Marriott Dubai-46">Jw Marriott Dubai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Armani Hotel Dubai-47">
+            <a data-cy="anchor-Armani Hotel Dubai-47">Armani Hotel Dubai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Grand Hyatt Dubai-48">
+            <a data-cy="anchor-Grand Hyatt Dubai-48">Grand Hyatt Dubai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Saii Lagoon Maldives-49">
+            <a data-cy="anchor-Saii Lagoon Maldives-49">Saii Lagoon Maldives</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Gevora Hotel Dubai-410">
+            <a data-cy="anchor-Gevora Hotel Dubai-410">Gevora Hotel Dubai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Hyatt Regency Dubai-411">
+            <a data-cy="anchor-Hyatt Regency Dubai-411">Hyatt Regency Dubai</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Pan Pacific Singapore-412">
+            <a data-cy="anchor-Pan Pacific Singapore-412"
+              >Pan Pacific Singapore</a
+            >,&nbsp;
+          </li>
+          <li data-cy="The Palm Dubai-413">
+            <a data-cy="anchor-The Palm Dubai-413">The Palm Dubai</a>,&nbsp;
+          </li>
+          <li data-cy="Caesars Palace-414">
+            <a data-cy="anchor-Caesars Palace-414">Caesars Palace</a>,&nbsp;
+          </li>
+          <li data-cy="Baiyoke Sky Hotel-415">
+            <a data-cy="anchor-Baiyoke Sky Hotel-415">Baiyoke Sky Hotel</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Centara Pattaya Hotel-416">
+            <a data-cy="anchor-Centara Pattaya Hotel-416"
+              >Centara Pattaya Hotel</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Embudu Village-417">
+            <a data-cy="anchor-Embudu Village-417">Embudu Village</a>,&nbsp;
+          </li>
+          <li data-cy="Orchard Hotel Singapore-418">
+            <a data-cy="anchor-Orchard Hotel Singapore-418"
+              >Orchard Hotel Singapore</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Reethi Beach Resort-419">
+            <a data-cy="anchor-Reethi Beach Resort-419">Reethi Beach Resort</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Ambassador Hotel Bangkok-420">
+            <a data-cy="anchor-Ambassador Hotel Bangkok-420"
+              >Ambassador Hotel Bangkok</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Dusit Thani Pattaya-421">
+            <a data-cy="anchor-Dusit Thani Pattaya-421">Dusit Thani Pattaya</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Shangri La Singapore-422">
+            <a data-cy="anchor-Shangri La Singapore-422">Shangri La Singapore</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Sunbeam Hotel Pattaya-423">
+            <a data-cy="anchor-Sunbeam Hotel Pattaya-423"
+              >Sunbeam Hotel Pattaya</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Taj Samudra Colombo-424">
+            <a data-cy="anchor-Taj Samudra Colombo-424">Taj Samudra Colombo</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Bangkok Palace Hotel-425">
+            <a data-cy="anchor-Bangkok Palace Hotel-425">Bangkok Palace Hotel</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Hilton Pattaya-426">
+            <a data-cy="anchor-Hilton Pattaya-426">Hilton Pattaya</a>,&nbsp;
+          </li>
+          <li data-cy="Novotel Phuket Resort-427">
+            <a data-cy="anchor-Novotel Phuket Resort-427"
+              >Novotel Phuket Resort</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Taj Exotica Resort Maldives-428">
+            <a data-cy="anchor-Taj Exotica Resort Maldives-428"
+              >Taj Exotica Resort Maldives</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Village Hotel Bugis-429">
+            <a data-cy="anchor-Village Hotel Bugis-429">Village Hotel Bugis</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Avani Atrium Bangkok-430">
+            <a data-cy="anchor-Avani Atrium Bangkok-430">Avani Atrium Bangkok</a
+            >,&nbsp;
+          </li>
+          <li data-cy="The Plaza New York-431">
+            <a data-cy="anchor-The Plaza New York-431">The Plaza New York</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Village Hotel Albert Court-432">
+            <a data-cy="anchor-Village Hotel Albert Court-432"
+              >Village Hotel Albert Court</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Amari Pattaya-433">
+            <a data-cy="anchor-Amari Pattaya-433">Amari Pattaya</a>
+          </li>
+        </ul>
+
+        <h3 class="text-[10px] font-[900]">QUICK LINKS</h3>
+
+        <ul class="flex flex-wrap text-[#4a4a4a] text-[12px] font-lato">
+          <li data-cy="Delhi Chennai Flights-50">
+            <a data-cy="anchor-Delhi Chennai Flights-50"
+              >Delhi Chennai Flights</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Delhi Mumbai Flights-51">
+            <a data-cy="anchor-Delhi Mumbai Flights-51">Delhi Mumbai Flights</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Delhi Goa Flights-52">
+            <a data-cy="anchor-Delhi Goa Flights-52">Delhi Goa Flights</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Chennai Mumbai flights-53">
+            <a data-cy="anchor-Chennai Mumbai flights-53"
+              >Chennai Mumbai flights</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Mumbai Hyderabad flights-54">
+            <a data-cy="anchor-Mumbai Hyderabad flights-54"
+              >Mumbai Hyderabad flights</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Kolkata to Rupsi Flights-55">
+            <a data-cy="anchor-Kolkata to Rupsi Flights-55"
+              >Kolkata to Rupsi Flights</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Rupsi to Guwahati Flights-56">
+            <a data-cy="anchor-Rupsi to Guwahati Flights-56"
+              >Rupsi to Guwahati Flights</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Pasighat to Guwahati Flights-57">
+            <a data-cy="anchor-Pasighat to Guwahati Flights-57"
+              >Pasighat to Guwahati Flights</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Delhi to Khajuraho Flights-58">
+            <a data-cy="anchor-Delhi to Khajuraho Flights-58"
+              >Delhi to Khajuraho Flights</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Cochin to Agatti Island Flights-59">
+            <a data-cy="anchor-Cochin to Agatti Island Flights-59"
+              >Cochin to Agatti Island Flights</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Hotels in Delhi-510">
+            <a data-cy="anchor-Hotels in Delhi-510">Hotels in Delhi</a>,&nbsp;
+          </li>
+          <li data-cy="Hotels in Mumbai-511">
+            <a data-cy="anchor-Hotels in Mumbai-511">Hotels in Mumbai</a>,&nbsp;
+          </li>
+          <li data-cy="Hotels In Goa-512">
+            <a data-cy="anchor-Hotels In Goa-512">Hotels In Goa</a>,&nbsp;
+          </li>
+          <li data-cy="Hotels In Jaipur-513">
+            <a data-cy="anchor-Hotels In Jaipur-513">Hotels In Jaipur</a>,&nbsp;
+          </li>
+          <li data-cy="Hotels In Ooty-514">
+            <a data-cy="anchor-Hotels In Ooty-514">Hotels In Ooty</a>,&nbsp;
+          </li>
+          <li data-cy="Hotels In Udaipur-515">
+            <a data-cy="anchor-Hotels In Udaipur-515">Hotels In Udaipur</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Hotels in Puri-516">
+            <a data-cy="anchor-Hotels in Puri-516">Hotels in Puri</a>,&nbsp;
+          </li>
+          <li data-cy="Hotels In North Goa-517">
+            <a data-cy="anchor-Hotels In North Goa-517">Hotels In North Goa</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Hotels In Rishikesh-518">
+            <a data-cy="anchor-Hotels In Rishikesh-518">Hotels In Rishikesh</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Honeymoon Packages-519">
+            <a data-cy="anchor-Honeymoon Packages-519">Honeymoon Packages</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Kerala Packages-520">
+            <a data-cy="anchor-Kerala Packages-520">Kerala Packages</a>,&nbsp;
+          </li>
+          <li data-cy="Kashmir Packages-521">
+            <a data-cy="anchor-Kashmir Packages-521">Kashmir Packages</a>,&nbsp;
+          </li>
+          <li data-cy="Ladakh Packages-522">
+            <a data-cy="anchor-Ladakh Packages-522">Ladakh Packages</a>,&nbsp;
+          </li>
+          <li data-cy="Goa Packages-523">
+            <a data-cy="anchor-Goa Packages-523">Goa Packages</a>,&nbsp;
+          </li>
+          <li data-cy="Thailand Packages-524">
+            <a data-cy="anchor-Thailand Packages-524">Thailand Packages</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Sri Lanka Visa-525">
+            <a data-cy="anchor-Sri Lanka Visa-525">Sri Lanka Visa</a>,&nbsp;
+          </li>
+          <li data-cy="Thailand Visa-526">
+            <a data-cy="anchor-Thailand Visa-526">Thailand Visa</a>,&nbsp;
+          </li>
+          <li data-cy="Explore Goa-527">
+            <a data-cy="anchor-Explore Goa-527">Explore Goa</a>,&nbsp;
+          </li>
+          <li data-cy="Explore Manali-528">
+            <a data-cy="anchor-Explore Manali-528">Explore Manali</a>,&nbsp;
+          </li>
+          <li data-cy="Explore Shimla-529">
+            <a data-cy="anchor-Explore Shimla-529">Explore Shimla</a>,&nbsp;
+          </li>
+          <li data-cy="Explore Jaipur-530">
+            <a data-cy="anchor-Explore Jaipur-530">Explore Jaipur</a>,&nbsp;
+          </li>
+          <li data-cy="Explore Srinagar-531">
+            <a data-cy="anchor-Explore Srinagar-531">Explore Srinagar</a>
+          </li>
+        </ul>
+
+        <h3 class="text-[10px] font-[900]">IMPORTANT LINKS</h3>
+        <ul class="flex flex-wrap text-[#4a4a4a] text-[12px] font-lato">
+          <li data-cy="Cheap Flights-60">
+            <a data-cy="anchor-Cheap Flights-60">Cheap Flights</a>,&nbsp;
+          </li>
+          <li data-cy="Flight Status-61">
+            <a data-cy="anchor-Flight Status-61">Flight Status</a>,&nbsp;
+          </li>
+          <li data-cy="Kumbh Mela-62">
+            <a data-cy="anchor-Kumbh Mela-62">Kumbh Mela</a>,&nbsp;
+          </li>
+          <li data-cy="Domestic Airlines-63">
+            <a data-cy="anchor-Domestic Airlines-63">Domestic Airlines</a
+            >,&nbsp;
+          </li>
+          <li data-cy="International Airlines-64">
+            <a data-cy="anchor-International Airlines-64"
+              >International Airlines</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Indigo-65">
+            <a data-cy="anchor-Indigo-65">Indigo</a>,&nbsp;
+          </li>
+          <li data-cy="Spicejet-66">
+            <a data-cy="anchor-Spicejet-66">Spicejet</a>,&nbsp;
+          </li>
+          <li data-cy="GoAir-67">
+            <a data-cy="anchor-GoAir-67">GoAir</a>,&nbsp;
+          </li>
+          <li data-cy="Air Asia-68">
+            <a data-cy="anchor-Air Asia-68">Air Asia</a>,&nbsp;
+          </li>
+          <li data-cy="Air India-69">
+            <a data-cy="anchor-Air India-69">Air India</a>,&nbsp;
+          </li>
+          <li data-cy="Indian Railways-610">
+            <a data-cy="anchor-Indian Railways-610">Indian Railways</a>,&nbsp;
+          </li>
+          <li data-cy="Trip Ideas-611">
+            <a data-cy="anchor-Trip Ideas-611">Trip Ideas</a>,&nbsp;
+          </li>
+          <li data-cy="Beaches-612">
+            <a data-cy="anchor-Beaches-612">Beaches</a>,&nbsp;
+          </li>
+          <li data-cy="Honeymoon Destinations-613">
+            <a data-cy="anchor-Honeymoon Destinations-613"
+              >Honeymoon Destinations</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Romantic Destinations-614">
+            <a data-cy="anchor-Romantic Destinations-614"
+              >Romantic Destinations</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Popular Destinations-615">
+            <a data-cy="anchor-Popular Destinations-615">Popular Destinations</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Resorts In Udaipur-616">
+            <a data-cy="anchor-Resorts In Udaipur-616">Resorts In Udaipur</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Resorts In Munnar-617">
+            <a data-cy="anchor-Resorts In Munnar-617">Resorts In Munnar</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Villas In Lonavala-618">
+            <a data-cy="anchor-Villas In Lonavala-618">Villas In Lonavala</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Hotels in Thailand-619">
+            <a data-cy="anchor-Hotels in Thailand-619">Hotels in Thailand</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Villas In Goa-620">
+            <a data-cy="anchor-Villas In Goa-620">Villas In Goa</a>,&nbsp;
+          </li>
+          <li data-cy="Domestic Flight Offers-621">
+            <a data-cy="anchor-Domestic Flight Offers-621"
+              >Domestic Flight Offers</a
+            >,&nbsp;
+          </li>
+          <li data-cy="International Flight Offers-622">
+            <a data-cy="anchor-International Flight Offers-622"
+              >International Flight Offers</a
+            >,&nbsp;
+          </li>
+          <li data-cy="UAE Flight Offers-623">
+            <a data-cy="anchor-UAE Flight Offers-623">UAE Flight Offers</a
+            >,&nbsp;
+          </li>
+          <li data-cy="USA-624"><a data-cy="anchor-USA-624">USA</a>,&nbsp;</li>
+          <li data-cy="UAE-625"><a data-cy="anchor-UAE-625">UAE</a>,&nbsp;</li>
+          <li data-cy="Saudi Arabia-626">
+            <a data-cy="anchor-Saudi Arabia-626">Saudi Arabia</a>,&nbsp;
+          </li>
+          <li data-cy="UK-627"><a data-cy="anchor-UK-627">UK</a>,&nbsp;</li>
+          <li data-cy="Oman-628"><a data-cy="anchor-Oman-628">Oman</a></li>
+        </ul>
+
+        <h3 class="text-[10px] font-[900]">CORPORATE TRAVEL</h3>
+        <ul class="flex flex-wrap text-[#4a4a4a] text-[12px] font-lato">
+          <li data-cy="Corporate Travel-70">
+            <a data-cy="anchor-Corporate Travel-70">Corporate Travel</a>,&nbsp;
+          </li>
+          <li data-cy="Corporate Hotel Booking-71">
+            <a data-cy="anchor-Corporate Hotel Booking-71"
+              >Corporate Hotel Booking</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Corporate Flight Booking-72">
+            <a data-cy="anchor-Corporate Flight Booking-72"
+              >Corporate Flight Booking</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Business Travel for SME-73">
+            <a data-cy="anchor-Business Travel for SME-73"
+              >Business Travel for SME</a
+            >,&nbsp;
+          </li>
+          <li data-cy="GST Invoice for International flights-74">
+            <a data-cy="anchor-GST Invoice for International flights-74"
+              >GST Invoice for International flights</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Business Travel Solutions-75">
+            <a data-cy="anchor-Business Travel Solutions-75"
+              >Business Travel Solutions</a
+            >,&nbsp;
+          </li>
+          <li data-cy="GST Invoice for Bus-76">
+            <a data-cy="anchor-GST Invoice for Bus-76">GST Invoice for Bus</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Corporate Bus booking-77">
+            <a data-cy="anchor-Corporate Bus booking-77"
+              >Corporate Bus booking</a
+            >,&nbsp;
+          </li>
+          <li data-cy="myBiz - Best Business Travel Platform-78">
+            <a data-cy="anchor-myBiz - Best Business Travel Platform-78"
+              >myBiz - Best Business Travel Platform</a
+            >,&nbsp;
+          </li>
+          <li data-cy="GST Invoice for Flights-79">
+            <a data-cy="anchor-GST Invoice for Flights-79"
+              >GST Invoice for Flights</a
+            >,&nbsp;
+          </li>
+          <li data-cy="GST Invoice for Corporate Travel-710">
+            <a data-cy="anchor-GST Invoice for Corporate Travel-710"
+              >GST Invoice for Corporate Travel</a
+            >,&nbsp;
+          </li>
+          <li data-cy="GST Invoice for Hotels-711">
+            <a data-cy="anchor-GST Invoice for Hotels-711"
+              >GST Invoice for Hotels</a
+            >,&nbsp;
+          </li>
+          <li data-cy="myBiz for Small Business-712">
+            <a data-cy="anchor-myBiz for Small Business-712"
+              >myBiz for Small Business</a
+            >,&nbsp;
+          </li>
+          <li data-cy="Free cancellation on International Flights-713">
+            <a data-cy="anchor-Free cancellation on International Flights-713"
+              >Free cancellation on International Flights</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section
+      class="px-[10px] md:px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[140px] bg-[#e7e7e7]"
+    >
+    <div class="flex flex-wrap justify-center items-start gap-[30px] p-[25px] py-[60px]">
+
+      <div class="flex flex-col shrink-0 w-[350px] max-w-[100%]  gap-[25px]">
+              <h2 class="font-[900] text-[16px] font-lato">Why MakeMyTrip?
+              </h2>
+              <p class="text-[12px] text-[#4a4a4a] ">Established in 2000, MakeMyTrip has since positioned itself as one of the leading companies, providing great offers, competitive airfares, exclusive discounts, and a seamless online booking experience to many of its customers. The experience of booking your flight tickets, hotel stay, and holiday package through our desktop site or mobile app can be done with complete ease and no hassles at all. We also deliver amazing offers, such as Instant Discounts, Fare Calendar, MyRewardsProgram, MyWallet, and many more while updating them from time to time to better suit our customers’ evolving needs and demands.</p>
+      </div>
+
+      <div class="flex flex-col shrink-0 w-[350px] max-w-[100%]  gap-[25px]">
+        <h2 class="font-[900] text-[16px] font-lato">Booking Flights with MakeMyTrip
+        </h2>
+        <p class="text-[12px] text-[#4a4a4a] ">At MakeMyTrip, you can find the best of deals and cheap air tickets to any place you want by booking your tickets on our website or app. Being India’s leading website for hotel, flight, and holiday bookings, MakeMyTrip helps you book flight tickets that are affordable and customized to your convenience. With customer satisfaction being our ultimate goal, we also have a 24/7 dedicated helpline to cater to our customer’s queries and concerns. Serving over 5 million happy customers, we at MakeMyTrip are glad to fulfill the dreams of folks who need a quick and easy means to find air tickets. You can get a hold of the cheapest flight of your choice today while also enjoying the other available options for your travel needs with us.</p>
+</div>
+
+
+<div class="flex flex-col shrink-0 w-[350px] max-w-[100%] gap-[25px]">
+  <h2 class="font-[900] text-[16px] font-lato">Domestic Flights with MakeMyTrip
+  </h2>
+  <p class="text-[12px] text-[#4a4a4a] ">MakeMyTrip is India's leading player for flight bookings. With the cheapest fare guarantee, experience great value at the lowest price. Instant notifications ensure current flight status, instant fare drops, amazing discounts, instant refunds and rebook options, price comparisons and many more interesting features.</p>
+</div>
+
+    </div>
+
+
+    </section>
+
+    <footer class="px-[10px] md:px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[140px] bg-black text-white">
+         <div class="flex justify-between py-[60px] items-center">
+          <div class="flex gap-[15px]">
+            <span><i class="fa-brands fa-twitter"></i></span>
+            <span><i class="fa-brands fa-facebook-f"></i></span>
+
+          </div>
+          <div class="flex">
+            <p>© 2023 MAKEMYTRIP PVT. LTD.</p>
+            <p>Country India USA UAE</p>
+          </div>
+         </div>
+    </footer>
+  </body>
+</html>
